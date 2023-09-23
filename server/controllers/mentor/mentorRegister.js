@@ -2,12 +2,13 @@ import mentorSchema from "../../models/mentorSchema.js";
 import bcrypt from "bcrypt"
 import jwt from "jsonwebtoken";
 import { usernames } from "../../tp/usernames.js";
+import fs from "fs/promises";
 
 
-const registermentor = async(req,res)=>{
+const mentorregister = async(req,res)=>{
     console.log(req.body);
     try {
-      const { email, password, cpassword  } = req.body;
+      const { email, password, cpassword } = req.body;
       if (!email || !password || !cpassword) {
         return res
           .status(400)
@@ -73,4 +74,4 @@ function generateRandomUsername() {
   }
 
 
-export default registermentor; 
+export default mentorregister; 

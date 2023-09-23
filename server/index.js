@@ -6,6 +6,7 @@ import cors from "cors";
 
 //importing routes
 import userroutes from "./routes/userroutes.js"
+import mentorroutes from "./routes/mentorroutes.js"
 
 const app = express();
 dotenv.config();
@@ -16,6 +17,7 @@ app.use(cors());
 
 // Routes
 app.use("/user", userroutes);
+app.use("/mentor", mentorroutes)
 
 const PORT = process.env.PORT || 5000;
 const DB = process.env.DB;
