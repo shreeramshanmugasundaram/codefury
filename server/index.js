@@ -36,6 +36,13 @@ app.use("/mentor", mentorroutes);
 // sockets
 io.on("connection", sockets);
 
+app.use(express.static(path.join(__dirname, "../client/build")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build/index.html"), (err) => {
+    res.status(500).send(err);
+  });
+});
+
 const PORT = process.env.PORT || 5000;
 const DB = process.env.DB;
 
