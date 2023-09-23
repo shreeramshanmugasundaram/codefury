@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Home from "./Pages/Home";
+import Login from "./Pages/Login";
+import Sign from "./Pages/Sign";
+import Profile from "./Pages/Profile";
+import ChatRooms from "./Pages/ChatRooms";
+import Room from "./Pages/Room";
+import DoctorRooms from "./Pages/DoctorRooms";
+import DoctorDetails from "./Pages/DoctorDetails";
+import NotFound from "./Pages/NotFound";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/sign" element={<Sign />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/chatrooms" element={<ChatRooms />} />
+          <Route path="/room/:roomid" element={<Room />} />
+          <Route path="/chatrooms" element={<ChatRooms />} />
+          <Route path="/doctors" element={<DoctorRooms />} />
+          <Route path="/doctors/:drid" element={<DoctorDetails />} />
+          <Route path="/*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
