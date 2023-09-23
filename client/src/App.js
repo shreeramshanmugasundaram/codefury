@@ -9,11 +9,15 @@ import Room from "./Pages/Room";
 import DoctorRooms from "./Pages/DoctorRooms";
 import DoctorDetails from "./Pages/DoctorDetails";
 import NotFound from "./Pages/NotFound";
+import Nav from "./Components/Commons/Nav";
+import Footer from "./Components/Commons/Footer";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <Nav />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
@@ -27,6 +31,7 @@ function App() {
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }
