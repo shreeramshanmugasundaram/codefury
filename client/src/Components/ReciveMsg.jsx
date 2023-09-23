@@ -1,6 +1,6 @@
 import React from "react";
 
-const ReciveMsg = () => {
+const ReciveMsg = ({ data }) => {
   return (
     <div>
       <div class="chat-message">
@@ -8,8 +8,7 @@ const ReciveMsg = () => {
           <div class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-1 items-end">
             <div>
               <span class="px-4 py-2 rounded-lg inline-block rounded-br-none bg-blue-600 text-white ">
-                Your error message says permission denied, npm global installs
-                must be given root privileges.
+                {data}
               </span>
             </div>
           </div>

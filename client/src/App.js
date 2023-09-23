@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
 import "./App.css";
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
@@ -24,12 +25,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/sign" element={<Sign />} />
-
           <Route path="/profile" element={<Profile />} />
           <Route path="/redirect" element={<MentorUser />} />
           <Route path="/" element={<LoginProtect />}>
             <Route path="/chatrooms" element={<ChatRooms />} />
-            <Route path="/room/:roomid" element={<Room />} />
+            <Route path="/room/:roomId" element={<Room />} />
             <Route path="/doctors" element={<DoctorRooms />} />
             <Route path="/doctors/:drid" element={<DoctorDetails />} />
           </Route>

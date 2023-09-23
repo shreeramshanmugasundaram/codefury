@@ -1,6 +1,6 @@
 import React from "react";
 
-const SendMsg = () => {
+const SendMsg = ({ data }) => {
   return (
     <div>
       <div class="chat-message">
@@ -8,7 +8,7 @@ const SendMsg = () => {
           <div class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-2 items-start">
             <div>
               <span class="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600">
-                Can be verified on any platform using docker
+                {data}
               </span>
             </div>
           </div>
