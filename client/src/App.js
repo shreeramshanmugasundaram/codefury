@@ -23,7 +23,6 @@ function App() {
           <Route path="/sign" element={<Sign />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/chatrooms" element={<ChatRooms />} />
-
           <Route path="/room/:roomid" element={<Room />} />
           <Route path="/chatrooms" element={<ChatRooms />} />
           <Route path="/doctors" element={<DoctorRooms />} />

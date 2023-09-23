@@ -6,7 +6,7 @@ import toast, { Toaster } from "react-hot-toast";
 const success = (msg) => toast.success(msg);
 const error = (msg) => toast.error(msg);
 
-const Sign = () => {
+const MentorRegister = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
@@ -134,4 +134,4 @@ const Sign = () => {
   );
 };
 
-export default Sign;
+export default MentorRegister;
