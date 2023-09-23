@@ -6,7 +6,7 @@ const Home = () => {
     <div>
       <section className="bg-white dark:bg-gray-900 ">
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 ">
-          <div className=" mt-20 text-center bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12 mb-8">
+          <div className="text-center bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12 mb-8">
             <h1 className=" leading-loose text-gray-900 dark:text-white text-3xl md:text-5xl font-extrabold mb-2 text-center">
               Mindful Living, Thriving Life
             </h1>

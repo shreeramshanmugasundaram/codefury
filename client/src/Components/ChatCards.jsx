@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const ChatCards = () => {
+  const navigate = useNavigate();
   return (
     <div className=" p-4 bg-slate-900 mx-2 my-2 text-cyan-200 rounded-md">
       <div className="text-lg py-2">
@@ -11,9 +13,15 @@ const ChatCards = () => {
         />
         Dancing Rasta
       </div>
-      {/* <div className="text-sm mt-2 text-right">By Shreeram</div> */}
-      <div className=" flex justify-end mt-16">
-        <button class="text-white right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+      <div className="text-sm mt-2">
+        <ul>{/* <li>Mentor: Shreeram</li> */}</ul>
+      </div>
+      <div className=" flex justify-between mt-16">
+        <div>20 members</div>
+        <button
+          onClick={() => navigate("/room/1")}
+          class="text-white right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
           Join Now
         </button>
       </div>

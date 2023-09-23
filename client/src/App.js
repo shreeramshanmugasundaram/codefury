@@ -17,21 +17,21 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Nav />
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/sign" element={<Sign />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/chatrooms" element={<ChatRooms />} />
+
           <Route path="/room/:roomid" element={<Room />} />
           <Route path="/chatrooms" element={<ChatRooms />} />
           <Route path="/doctors" element={<DoctorRooms />} />
           <Route path="/doctors/:drid" element={<DoctorDetails />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
-      <Footer />
     </div>
   );
 }
