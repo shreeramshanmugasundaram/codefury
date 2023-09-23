@@ -28,6 +28,8 @@ export const usernames = [
   "BuzzMe",
   "DigiWiz",
   "Codely",
+  "SkyNet",
+  "AppMan",
   "TechUp",
   "LinkIt",
   "CodeGe",
