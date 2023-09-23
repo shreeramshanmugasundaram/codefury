@@ -11,6 +11,9 @@ import DoctorDetails from "./Pages/DoctorDetails";
 import NotFound from "./Pages/NotFound";
 import Nav from "./Components/Commons/Nav";
 import Footer from "./Components/Commons/Footer";
+import MentorRegister from "./Pages/MentorRegister";
+import MentorUser from "./Pages/MentorUser";
+import LoginProtect from "./ProtectRoute/LoginProtect";
 
 function App() {
   return (
@@ -21,12 +24,16 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/sign" element={<Sign />} />
+
           <Route path="/profile" element={<Profile />} />
-          <Route path="/chatrooms" element={<ChatRooms />} />
-          <Route path="/room/:roomid" element={<Room />} />
-          <Route path="/chatrooms" element={<ChatRooms />} />
-          <Route path="/doctors" element={<DoctorRooms />} />
-          <Route path="/doctors/:drid" element={<DoctorDetails />} />
+          <Route path="/redirect" element={<MentorUser />} />
+          <Route path="/" element={<LoginProtect />}>
+            <Route path="/chatrooms" element={<ChatRooms />} />
+            <Route path="/room/:roomid" element={<Room />} />
+            <Route path="/doctors" element={<DoctorRooms />} />
+            <Route path="/doctors/:drid" element={<DoctorDetails />} />
+          </Route>
+          <Route path="/mentorregister" element={<MentorRegister />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
         <Footer />
