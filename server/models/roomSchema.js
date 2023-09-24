@@ -26,11 +26,11 @@ const roomSchema = new mongoose.Schema({
 //   },
   mentor_Id: {
     type: String,
-    required: true,
+    // required: true,
   },
   category: {
     type: String,
-    required: true,
+    // required: true,
   },
   visitors: [
     {
