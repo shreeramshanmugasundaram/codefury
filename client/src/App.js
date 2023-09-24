@@ -31,7 +31,6 @@ function App() {
             <Route path="/chatrooms" element={<ChatRooms />} />
             <Route path="/room/:roomId" element={<Room />} />
             <Route path="/doctors" element={<DoctorRooms />} />
-            <Route path="/doctors/:drid" element={<DoctorDetails />} />
           </Route>
           <Route path="/mentorregister" element={<MentorRegister />} />
           <Route path="/*" element={<NotFound />} />

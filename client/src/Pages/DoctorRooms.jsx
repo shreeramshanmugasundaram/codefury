@@ -1,6 +1,40 @@
 import React from "react";
 import ChatCards from "../Components/ChatCards";
 import Search from "../Components/Search";
+import DrCards from "../Components/DrCards";
+
+const doctors = [
+  { name: "Vedika Patil", Des: "Bsc Psychologist", link: "/vedika_patil" },
+  { name: "John Smith", Des: "MD Psychiatrist", link: "/john_smith" },
+  {
+    name: "Sarah Jones",
+    Des: "Ph.D. Clinical Psychologist",
+    link: "/sarah_jones",
+  },
+  { name: "David Lee", Des: "MSc Child Psychologist", link: "/david_lee" },
+  { name: "Emily Brown", Des: "Ph.D. Neuropsychologist", link: "/emily_brown" },
+  {
+    name: "Michael Wang",
+    Des: "MD Behavioral Therapist",
+    link: "/michael_wang",
+  },
+  {
+    name: "Laura Davis",
+    Des: "Ph.D. Counseling Psychologist",
+    link: "/laura_davis",
+  },
+  {
+    name: "Kevin Johnson",
+    Des: "MSc Clinical Social Worker",
+    link: "/kevin_johnson",
+  },
+  {
+    name: "Jennifer White",
+    Des: "Ph.D. Forensic Psychologist",
+    link: "/jennifer_white",
+  },
+  // Add more doctors here...
+];
 
 const DoctorRooms = () => {
   return (
@@ -21,7 +55,11 @@ const DoctorRooms = () => {
             Audio Rooms
           </button>
         </div>
-        <div className="grid grid-cols-3"></div>
+        <div className="grid grid-cols-3">
+          {doctors.map((data) => {
+            return <DrCards data={data} />;
+          })}
+        </div>
       </div>
     </div>
   );
