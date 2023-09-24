@@ -32,12 +32,14 @@ const roomSchema = new mongoose.Schema({
     type: String,
     // required: true,
   },
+
   visitors: [
     {
       type: String,
       required: true,
     },
   ],
+
   // messages: [messageSchema], // Embed the message schema as an array of messages
 });
 
