@@ -51,11 +51,9 @@ const Room = () => {
             </div>
             <div class="flex flex-col leading-tight">
               <div class="text-2xl mt-1 flex items-center">
-                <span class="text-gray-700 mr-3">Anderson Vanhron</span>
+                <span class="text-gray-700 mr-3">{parms.roomId}</span>
               </div>
-              <span class="text-lg text-gray-600">
-                Junior Developer {parms.roomId}
-              </span>
+              <span class="text-lg text-gray-600"></span>
             </div>
           </div>
         </div>

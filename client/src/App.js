@@ -8,7 +8,6 @@ import Profile from "./Pages/Profile";
 import ChatRooms from "./Pages/ChatRooms";
 import Room from "./Pages/Room";
 import DoctorRooms from "./Pages/DoctorRooms";
-import DoctorDetails from "./Pages/DoctorDetails";
 import NotFound from "./Pages/NotFound";
 import Nav from "./Components/Commons/Nav";
 import Footer from "./Components/Commons/Footer";

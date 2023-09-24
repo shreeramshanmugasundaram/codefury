@@ -20,10 +20,10 @@ const roomSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-//   room_limit: {
-//     type: String,
-//     required: true,
-//   },
+  //   room_limit: {
+  //     type: String,
+  //     required: true,
+  //   },
   mentor_Id: {
     type: String,
     // required: true,
@@ -38,7 +38,7 @@ const roomSchema = new mongoose.Schema({
       required: true,
     },
   ],
-  messages: [messageSchema], // Embed the message schema as an array of messages
+  // messages: [messageSchema], // Embed the message schema as an array of messages
 });
 
 export default mongoose.model("Room", roomSchema);

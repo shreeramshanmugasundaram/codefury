@@ -17,3 +17,8 @@ export const login = (formData) => API.post("/user/userlogin", formData);
 export const getprofile = () => API.get("/user/profile");
 export const mentorRegister = (formData) =>
   API.post("/user/mentorregister", formData);
+
+export const getRooms = () => API.get("/user/getrooms");
+
+export const createRoom = (formData) =>
+  API.post("/mentor/createrroom", formData);

@@ -8,6 +8,6 @@ import getrooms from "../controllers/user/getallroom.js";
 
 router.post("/registeruser", registeruser);
 router.post("/userlogin", userLogin);
-router.post("/getrooms", getrooms);
+router.get("/getrooms", getrooms);
 
 export default router;

@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ChatCards from "../Components/ChatCards";
 import Search from "../Components/Search";
-
+import { getRooms } from "../actions/getRooms";
 const ChatRooms = () => {
+  const [rooms, setRooms] = useState();
+  useEffect(() => {
+    getRooms(setRooms);
+    console.log(rooms);
+  }, [rooms]);
   return (
     <div className="max-w-5xl mx-auto m-10">
       <Search />
@@ -21,16 +26,9 @@ const ChatRooms = () => {
         </button>
       </div>
       <div className="grid grid-cols-3">
-        <ChatCards />
-        <ChatCards />
-        <ChatCards />
-        <ChatCards />
-        <ChatCards />
-        <ChatCards /> <ChatCards />
-        <ChatCards />
-        <ChatCards /> <ChatCards />
-        <ChatCards />
-        <ChatCards />
+        {rooms?.map((room) => {
+          return <ChatCards room={room} />;
+        })}
       </div>
     </div>
   );
