@@ -9,10 +9,10 @@ const Profile = () => {
   const [roomName, setRoomName] = useState();
   const [profile, setProfile] = useState();
 
-  useEffect(() => {
-    getprofile(setProfile);
-    console.log(profile);
-  });
+  // useEffect(() => {
+  //   getprofile(setProfile);
+  //   console.log(profile);
+  // });
 
   const handleRoomCreation = () => {
     createRoom({ roomname: roomName }, navigate);

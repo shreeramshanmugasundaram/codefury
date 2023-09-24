@@ -1,7 +1,6 @@
 export const usernames = [
   "Techie",
   "Coder",
-  "Gizmo",
   "Ninja",
   "Pixel",
   "Robot",
@@ -35,5 +34,5 @@ export const usernames = [
   "CodeGe",
   "Wired",
   "InoByte",
-  "CyberX",
+  "CyberX"
 ];
