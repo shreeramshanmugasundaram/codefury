@@ -5,7 +5,7 @@ import roomSchema from "../../models/roomSchema.js";
 const createroom = async(req,res)=>{
     console.log(req.body);
     try {
-      const { email, password, cpassword , phone, qualification } = req.body;
+      const {roomname,room_limit} = req.body;
       if (!email || !password || !cpassword || !phone || !qualification) {
         return res
           .status(400)
