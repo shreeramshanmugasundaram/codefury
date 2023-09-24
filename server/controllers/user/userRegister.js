@@ -3,6 +3,7 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import { usernames } from "../../tp/usernames.js";
 import fs from "fs/promises";
+import { profile } from "console";
 
 const registerUser = async (req, res) => {
   console.log(req.body);
@@ -28,11 +29,12 @@ const registerUser = async (req, res) => {
 
     const username = generateRandomUsername();
     deleteUsername(username);
-
+    var profileurl="https://img.freepik.com/premium-vector/awesome-spider-man-with-suit-illustrated-mascot-esports-gaming-logo-design-marvel-world_196854-1859.jpg"
     const result = await userSchema.create({
       email,
       password: hashedPassword,
       username: username,
+      proileurl:profileurl
     });
 
     const jsonKey = process.env.JSONTOKEN; // Make sure this is securely stored
