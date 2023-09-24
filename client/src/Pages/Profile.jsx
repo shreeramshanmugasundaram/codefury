@@ -9,9 +9,10 @@ const Profile = () => {
   const [roomName, setRoomName] = useState();
   const [profile, setProfile] = useState();
 
-  // useEffect(() => {
-  //   getprofile(setProfile);
-  // });
+  useEffect(() => {
+    getprofile(setProfile);
+    console.log(profile);
+  });
 
   const handleRoomCreation = () => {
     createRoom({ roomname: roomName }, navigate);
@@ -72,15 +73,13 @@ const Profile = () => {
         <div class="flex flex-col items-center pb-10">
           <img
             class="w-24 h-24 mb-3 rounded-full shadow-lg"
-            src="/docs/images/people/profile-picture-3.jpg"
+            src="https://img.freepik.com/premium-vector/awesome-spider-man-with-suit-illustrated-mascot-esports-gaming-logo-design-marvel-world_196854-1859.jpg "
             alt="Bonnie image"
           />
           <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">
             Bonnie Green
           </h5>
-          <span class="text-sm text-gray-500 dark:text-gray-400">
-            Visual Designer
-          </span>
+          <span class="text-sm text-gray-500 dark:text-gray-400"></span>
         </div>
       </div>
 

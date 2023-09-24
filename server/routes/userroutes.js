@@ -10,6 +10,6 @@ import getprofile from "../controllers/user/getprofile.js";
 router.post("/registeruser", registeruser);
 router.post("/userlogin", userLogin);
 router.get("/getrooms", getrooms);
-
 router.get("/getprofile", getprofile);
+
 export default router;

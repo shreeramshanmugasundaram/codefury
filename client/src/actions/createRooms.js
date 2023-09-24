@@ -6,11 +6,8 @@ export const createRoom = async (formData, navigate) => {
       .createRoom(formData)
       .then((response) => {
         navigate("/chatrooms");
-        // success(response.data.message);
       })
-      .catch((err) => {
-        // error(err.response.data.message);
-      });
+      .catch((err) => {});
   } catch (error) {
     console.log(error);
   }
