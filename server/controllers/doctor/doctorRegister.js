@@ -6,8 +6,8 @@ import jwt from "jsonwebtoken";
 const registerdoctor = async(req,res)=>{
     console.log(req.body);
     try {
-      const { email, password, cpassword , phone, qualification } = req.body;
-      if (!email || !password || !cpassword || !phone || !qualification) {
+      const { email, password, cpassword} = req.body;
+      if (!email || !password || !cpassword) {
         return res
           .status(400)
           .json({ message: "Please fill all the required inputs " });
@@ -25,8 +25,6 @@ const registerdoctor = async(req,res)=>{
       const result = await doctorSchema.create({
         email,
         password: hashedPassword,
-        phone:phone,
-        qualification:qualification
       });
   
       const jsonKey = process.env.JSONTOKEN;
